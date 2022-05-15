@@ -30,10 +30,7 @@ li {
   list-style: none;
   float: left;
   margin-left: auto;
-  
-  
 }
-
 
 li a {
   color: rgba(193,132,143,1);
@@ -41,6 +38,18 @@ li a {
   font-size: 25px;
   text-decoration: none;
 }
+
+#footer {
+  /* width: 100%;
+  height: 100px; */
+  background-color: rgba(255,255,255,0.4);
+  
+}
+
+.footer_text p {
+  color: rgba(193,132,143,1);
+}
+
 a.nav_btn {
   border-radius: 0;
   border-bottom: 2px dashed white;
@@ -98,22 +107,7 @@ a.nav_btn {
   margin-left: auto;
 }
 
-.staff_img {
-  background-image: url("img/adam-winger-FkAZqQJTbXM-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: 600px 480px;
-  width: 700px;
-  height: 480px;
-  position: relative;
-}
 
-.staff_text {
-  color: #ffffff;
-  border-bottom: 1px solid white;
-  position: absolute;
-  top: 50%;
-  left: 40%;
-}
 
 .slideConts {
   margin: 200Px 0px;
@@ -189,10 +183,94 @@ table td{
   text-align: center;
 }
 
+
+.slideShow {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.slideShow ul.imgWrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.slideShow ul.imgWrap li {
+  display: none;
+  width: 100%;
+  list-style-type: none;
+}
+
+.staff_img {
+  width: 600px;
+  height: 480px;
+  object-fit: cover;
+  
+}
+.is-show p {
+  color: rgba(193,132,143,1);
+  text-align: center
+}
+
+.slideShow ul.imgWrap li.is-show {
+  display: block;
+  animation: slideAnime 300ms ease-out 0ms 1 normal both;
+}
+
+@keyframes slideAnime {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.slideShow ul.imgWrap li img {
+  width: 100%;
+}
+
+.slideShow button {
+  display: block;
+  position: absolute;
+  top: calc( 50% - 20px );
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  padding: 4px 0 0 0;
+  background: rgba(193,132,143,1);
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3em;
+  outline: none;
+  transition: transform 200ms;
+}
+
+.slideShow button.btn-prev {
+  left: -50px;
+  transform: rotate( 90deg );
+}
+
+.slideShow button.btn-prev:hover {
+  transform: rotate( 90deg ) scale( 1.1 );
+}
+
+.slideShow button.btn-next {
+  right: -50px;
+  transform: rotate( -90deg );
+}
+
+.slideShow button.btn-next:hover {
+  transform: rotate( -90deg ) scale( 1.1 );
+}
+
+
+
+
+
 @media screen and (max-width:768px) {
   
   .greetings h1 {
     height: 6.2rem;
+    width: 60%;
   }
 #nav{
   position: absolute;
@@ -338,5 +416,17 @@ p {
   }
   .slideContsR.show {
     transform: translate(0px, 0) !important;
+  }
+
+  .slideShow {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .staff_img {
+    width: 300px;
+    height: 240px;
+    object-fit: cover;
+    
   }
 }
