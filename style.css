@@ -57,8 +57,8 @@ a.nav_btn {
 }
 
 .greetings h1 {
-  background-color: black;
-  color: wheat;
+  background-color: rgba(255,255,255,0.7);
+  color: rgba(193,132,143,1);
   position: absolute;
   top: 0;
   right: 0;
@@ -191,7 +191,9 @@ table td{
 
 @media screen and (max-width:768px) {
   
-
+  .greetings h1 {
+    height: 6.2rem;
+  }
 #nav{
   position: absolute;
   height: 100vh;
@@ -297,9 +299,9 @@ p {
   #nav ul li {
     font-size: 14px;
   }
-  h1 {
+  /* h1 {
     display: none;
-  }
+  } */
   h2 {
     display: block;
     font-size: 14px;
