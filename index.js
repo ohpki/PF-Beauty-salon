@@ -2,20 +2,23 @@ function hamburger() {
   document.getElementById('line1').classList.toggle('line_1');
   document.getElementById('line2').classList.toggle('line_2');
   document.getElementById('line3').classList.toggle('line_3');
-  document.getElementById('menu_text').textContent = "close";
   document.getElementById('nav').classList.toggle('in');
   let changeElement = (e)=> {
     //el.classList.toggle('active');
-    
+    console.log(e)
     if(e.style.display==''){
-      e.style.display='none';
+      console.log('test1')
+      e.style.display='block';
     }else{
+      console.log('test2')
       e.style.display='';
     }
   }
 }
 document.getElementById('hamburger').addEventListener('click' , function () {
+  console.log('hamburger')
   hamburger();
+  document.getElementById('nav').classList.toggle('nav-hidden');
 });
 
 let slideConts = document.querySelectorAll('.slideConts'); // スライドで表示させる要素の取得
