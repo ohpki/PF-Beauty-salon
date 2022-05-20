@@ -5,15 +5,22 @@ function hamburger() {
   document.getElementById('nav').classList.toggle('in');
   let changeElement = (e)=> {
     //el.classList.toggle('active');
-    console.log(e)
-    if(e.style.display==''){
-      console.log('test1')
-      e.style.display='block';
-    }else{
-      console.log('test2')
-      e.style.display='';
-    }
+  //   console.log(e)
+  //   if(e.style.display==''){
+  //     console.log('test1')
+  //     e.style.display='block';
+  //   }else{
+  //     console.log('test2')
+  //     e.style.display='';
+  //   }
+  // }
+   
+  if(e.style.display==''){
+    e.style.display='none';
+  }else{
+    e.style.display='';
   }
+}
 }
 
 document.getElementById('hamburger').addEventListener('click' , function () {
