@@ -22,7 +22,6 @@ function hamburger() {
   }
 }
 }
-
 document.getElementById('hamburger').addEventListener('click' , function () {
   console.log('hamburger')
   hamburger();
