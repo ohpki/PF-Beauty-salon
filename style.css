@@ -24,7 +24,6 @@ body {
   align-items: center; /* 中の要素を上下中央に並べる */
 }
 
-
 li {
   text-align: right;
   list-style: none;
