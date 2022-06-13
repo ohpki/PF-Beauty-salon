@@ -260,10 +260,6 @@ table td{
   transform: rotate( -90deg ) scale( 1.1 );
 }
 
-
-
-
-
 @media screen and (max-width:768px) {
   
   .greetings h1 {
